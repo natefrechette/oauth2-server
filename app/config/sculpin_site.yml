@@ -5,5 +5,12 @@ google_analytics_tracking_id: UA-46050814-5
 menu:
     Getting Started:
         Introduction: '/'
-        Simple example: '/simple-example/'
-        Installation: '/installation/'
+        Terminology: '/terminology/'
+        Installation: '/authorization-server/installation/'
+        Implementing storage interfaces: '/implementing-storage-interfaces/'
+    Authorization Server:
+        'Which grant?': '/authorization-server/which-grant/'
+        'Client Credentials Grant': '/authorization-server/client-credentials-grant/'
+        'Password Grant': '/authorization-server/resource-owner-password-credentials-grant/'
+        'Refresh Token Grant': '/authorization-server/refresh-token-grant/'
+    Resource Server:
