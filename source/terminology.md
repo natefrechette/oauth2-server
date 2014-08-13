@@ -10,3 +10,4 @@ layout: layout
 * `Client` - An application which accesses protected resources on behalf of the resource owner (such as a user).  The client could hosted on a server, desktop, mobile or other device.
 * `Grant` - A grant is a method of acquiring an access token.
 * `Resource server` - A server which sits in front of protected resources (for example "tweets", users' photos, or personal data) and is capable of accepting and responsing to protected resource requests using access tokens.
+* `Scope` - A permission

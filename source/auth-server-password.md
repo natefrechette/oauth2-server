@@ -24,6 +24,9 @@ $passwordGrant->setVerifyCredentialsCallback(function ($username, $password) {
 });
 ~~~
 
+
+## Implementation
+
 The client will request an access token so create an `/access_token` endpoint.
 
 ~~~.language-php

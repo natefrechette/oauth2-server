@@ -22,6 +22,8 @@ $clientCredentials = new \League\OAuth2\Server\Grant\ClientCredentialsGrant();
 $server->addGrantType($clientCredentials);
 ~~~
 
+## Implementation
+
 The client will request an access token so create an `/access_token` endpoint.
 
 ~~~.language-php
