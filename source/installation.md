@@ -15,7 +15,7 @@ Otherwise create a new file in your project root called composer.json add set th
 ~~~.language-javascript
 {
     "require": {
-        "league/oauth2-server": "4.*"
+        "league/oauth2-server": "4.0.*@dev"
     }
 }
 ~~~
