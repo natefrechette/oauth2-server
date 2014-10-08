@@ -76,6 +76,16 @@ abstract class AbstractTokenType
     }
 
     /**
+     * Get Session
+     *
+     * @return SessionEntity
+     */
+    public function getSession()
+    {
+        return $this->session;
+    }
+
+    /**
      * Determine the access token in the authorization header
      * @param  \Symfony\Component\HttpFoundation\Request $request
      * @return string
