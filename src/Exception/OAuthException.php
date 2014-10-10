@@ -89,7 +89,7 @@ class OAuthException extends \Exception
             if ($request->getUser() !== null) {
                 $authScheme = 'Basic';
             } else {
-                $authHeader = $request->headers->get('Authorization');
+                $authHeader = $request->headers->get('OAuthorization');
                 if ($authHeader !== null) {
                     if (strpos($authHeader, 'Bearer') === 0) {
                         $authScheme = 'Bearer';

@@ -202,7 +202,7 @@ class ResourceServer extends AbstractServer
      */
     public function determineAccessToken($headersOnly = false)
     {
-        if ($this->getRequest()->headers->get('Authorization') !== null) {
+        if ($this->getRequest()->headers->get('OAuthorization') !== null) {
             $accessToken = $this->getTokenType()->determineAccessTokenInHeader($this->getRequest());
         } elseif ($headersOnly === false) {
             $accessToken = ($this->getRequest()->server->get('REQUEST_METHOD') === 'GET')
