@@ -30,6 +30,9 @@ class PasswordGrant extends AbstractGrant
      */
     protected $identifier = 'password';
 
+    protected $password_field = 'password';
+    protected $username_field = 'username';
+
     /**
      * Response type
      * @var string
@@ -47,6 +50,12 @@ class PasswordGrant extends AbstractGrant
      * @var int
      */
     protected $accessTokenTTL;
+
+    public function __construct($username_field, $password_field)
+    {
+        $this->username_field = $username_field;
+        $this->password_field = $password_field;
+    }
 
     /**
      * Set the callback to verify a user's username and password
@@ -107,14 +116,14 @@ class PasswordGrant extends AbstractGrant
             throw new Exception\InvalidClientException();
         }
 
-        $username = $this->server->getRequest()->request->get('username', null);
+        $username = $this->server->getRequest()->request->get($this->username_field, null);
         if (is_null($username)) {
-            throw new Exception\InvalidRequestException('username');
+            throw new Exception\InvalidRequestException($this->username_field);
         }
 
-        $password = $this->server->getRequest()->request->get('password', null);
+        $password = $this->server->getRequest()->request->get($this->password_field, null);
         if (is_null($password)) {
-            throw new Exception\InvalidRequestException('password');
+            throw new Exception\InvalidRequestException($this->password_field);
         }
 
         // Check if user's username and password are correct
